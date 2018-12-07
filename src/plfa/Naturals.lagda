@@ -490,6 +490,11 @@ Define exponentiation, which is given by the following equations:
 
 Check that `3 ^ 4` is `81`.
 
+\begin{code}
+_^_ : ℕ → ℕ → ℕ
+n ^ zero = suc zero
+n ^ (suc m) = n * (n ^ m)
+\end{code}
 
 ## Monus
 
@@ -550,6 +555,33 @@ _ =
 
 Compute `5 ∸ 3` and `3 ∸ 5`, writing out your reasoning as a chain of equations.
 
+\begin{code}
+_ =
+  begin
+    5 ∸ 3
+  ≡⟨⟩
+    4 ∸ 2
+  ≡⟨⟩
+    3 ∸ 1
+  ≡⟨⟩
+    2 ∸ 0
+  ≡⟨⟩
+    2
+  ∎
+
+_ =
+  begin
+    3 ∸ 5
+  ≡⟨⟩
+    2 ∸ 4
+  ≡⟨⟩
+    1 ∸ 3
+  ≡⟨⟩
+    0 ∸ 2
+  ≡⟨⟩
+    0
+  ∎
+\end{code}
 
 ## Precedence
 
